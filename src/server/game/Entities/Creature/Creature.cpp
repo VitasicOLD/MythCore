@@ -1087,7 +1087,7 @@ void Creature::SelectLevel(const CreatureTemplate *cinfo)
     float healthmod = _GetHealthMod(rank);
 
     uint32 basehp = stats->GenerateHealth(cinfo);
-    uint32 health = uint32(basehp * healthmod);
+    uint32 health =  isPet() ? basehp : uint32(basehp * healthmod);
 
     SetCreateHealth(health);
     SetMaxHealth(health);
