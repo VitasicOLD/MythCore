@@ -11,6 +11,9 @@
 
 #include "ScriptLoader.h"
 
+// custom
+void AddSC_DuelReset();
+
 // spells
 void AddSC_deathknight_spell_scripts();
 void AddSC_druid_spell_scripts();
@@ -1208,3 +1211,10 @@ void AddOutdoorPvPScripts()
     AddSC_outdoorpvp_wg();
 #endif
 }
+
+{
+#ifdef SCRIPTS
+     /* This is where custom scripts should be added. */
+     AddSC_DuelReset();
+#endif
+ }
