@@ -193,7 +193,7 @@ CREATE TABLE `realmlist` (
   `address` varchar(32) NOT NULL default '127.0.0.1',
   `port` int(11) NOT NULL default '8085',
   `icon` tinyint(3) unsigned NOT NULL default '0',
-  `color` tinyint(3) unsigned NOT NULL default '2',
+  `flag` tinyint(3) unsigned NOT NULL default '2',
   `timezone` tinyint(3) unsigned NOT NULL default '0',
   `allowedSecurityLevel` tinyint(3) unsigned NOT NULL default '0',
   `population` float unsigned NOT NULL default '0',
@@ -209,7 +209,7 @@ CREATE TABLE `realmlist` (
 
 LOCK TABLES `realmlist` WRITE;
 /*!40000 ALTER TABLE `realmlist` DISABLE KEYS */;
-INSERT INTO `realmlist` (`id`,`name`,`address`,`port`,`icon`,`color`,`timezone`,`allowedSecurityLevel`,`population`,`gamebuild`) VALUES
+INSERT INTO `realmlist` (`id`,`name`,`address`,`port`,`icon`,`flag`,`timezone`,`allowedSecurityLevel`,`population`,`gamebuild`) VALUES
 (1,'Myth','127.0.0.1',8085,1,0,1,0,0,12340);
 /*!40000 ALTER TABLE `realmlist` ENABLE KEYS */;
 UNLOCK TABLES;
