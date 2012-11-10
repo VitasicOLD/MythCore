@@ -16650,8 +16650,8 @@ void Unit::ApplyResilience(Unit const* victim, float* crit, int32* damage, bool 
             if(source && damage)
             {
                 if(isCrit)
-                    *damage -= target->GetMeleeCritDamageReduction(*damage)*1.3;
-                *damage -= target->GetMeleeDamageReduction(*damage)*1.34;
+                    *damage -= target->GetMeleeCritDamageReduction(*damage)*1.34;
+                *damage -= target->GetMeleeDamageReduction(*damage)*1.38;
             }
             break;
         case CR_CRIT_TAKEN_RANGED:
@@ -16661,8 +16661,8 @@ void Unit::ApplyResilience(Unit const* victim, float* crit, int32* damage, bool 
             if(source && damage)
             {
                 if(isCrit)
-                    *damage -= target->GetRangedCritDamageReduction(*damage)*1.3;
-                *damage -= target->GetRangedDamageReduction(*damage)*1.34;
+                    *damage -= target->GetRangedCritDamageReduction(*damage)*1.34;
+                *damage -= target->GetRangedDamageReduction(*damage)*1.38;
             }
             break;
         case CR_CRIT_TAKEN_SPELL:
@@ -16672,8 +16672,8 @@ void Unit::ApplyResilience(Unit const* victim, float* crit, int32* damage, bool 
             if(source && damage)
             {
                 if(isCrit)
-                    *damage -= target->GetSpellCritDamageReduction(*damage)*1.3;
-                *damage -= target->GetSpellDamageReduction(*damage)*1.34;
+                    *damage -= target->GetSpellCritDamageReduction(*damage)*1.34;
+                *damage -= target->GetSpellDamageReduction(*damage)*1.38;
             }
             break;
         default:
