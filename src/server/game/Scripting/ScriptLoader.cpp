@@ -11,9 +11,6 @@
 
 #include "ScriptLoader.h"
 
-// custom
-void AddSC_DuelReset();
-
 // spells
 void AddSC_deathknight_spell_scripts();
 void AddSC_druid_spell_scripts();
@@ -49,6 +46,10 @@ void AddSC_tele_commandscript();
 void AddSC_titles_commandscript();
 void AddSC_wp_commandscript();
 void AddSC_gps_commandscript();
+// custom
+void AddSC_DuelReset();
+//TeleNPC2
+void AddSC_npc_teleport();
 
 #ifdef SCRIPTS
 //world
@@ -647,6 +648,10 @@ void AddCommandScripts()
     AddSC_titles_commandscript();
     AddSC_wp_commandscript();
     AddSC_gps_commandscript();
+    // custom
+    AddSC_DuelReset();
+    //TeleNPC2
+    AddSC_npc_teleport();
 }
 
 void AddWorldScripts()
@@ -1211,11 +1216,3 @@ void AddOutdoorPvPScripts()
     AddSC_outdoorpvp_wg();
 #endif
 }
-
-void AddCustomScripts()
-{
-#ifdef SCRIPTS
-     /* This is where custom scripts should be added. */
-     AddSC_DuelReset();
-#endif
- }
