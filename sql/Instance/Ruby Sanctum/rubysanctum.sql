@@ -99,6 +99,5 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `npc_entry`, `content_lo
 ( -1752035, 'You will find only suffering within the realm of twilight! Enter if you dare!',NULL,NULL,17507,0,0),
 ( -1752036, 'I am the light and the darkness! Cower, mortals, before the herald of Deathwing!',NULL,NULL,17508,0,0);
 
-DELETE FROM `creature` WHERE `id` = 39863 AND `map` = 724;
-INSERT INTO `creature` (`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`DeathState`,`MovementType`)
-VALUES (39863,724,15,1,0,0,3144.93,527.233,72.8887,0.110395,300,0,0,11156000,0,0,0);
+DELETE FROM creature WHERE id = 39863;
+INSERT INTO creature VALUES ('250456', '39863', '724', '15', '1', '0', '0', '3144,93', '527,233', ' 72.887245', '0,110395', '604800', '0', '0', '11156000', '0', '0', '0', '0', '0');
